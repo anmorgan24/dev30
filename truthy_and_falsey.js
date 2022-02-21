@@ -1,3 +1,5 @@
+// In JavaScript, every value that we have, when used in the context of a conditional, will be "truthy" or "falsey."
+
 if ('hi') { console.log("truthy") } else { console.log("falsey") }; // truthy
 
 if (null) { console.log("truthy") } else { console.log("falsey") }; // falsey
