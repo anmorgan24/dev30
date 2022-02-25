@@ -22,7 +22,7 @@ var getComputerChoice = function () {
 
 var determineWinner = function (userChoice, computerChoice) {
    if (userInput === 'bomb') {
-       return 'CONGRATULATIONS! YOU WIN EVERYTHING!'
+       return 'CONGRATULATIONS! YOU WIN EVERYTHING!';
    }
    if (userChoice === computerChoice) {
       return 'You have tied!';
