@@ -2,7 +2,7 @@ var userInput = window.prompt("Do you choose rock, paper, or scissors?");
 
 var getUserChoice = function (userInput) {
    userInput = userInput.toLowerCase();
-   if (userInput === 'rock' | userInput === 'scissors' | userInput === 'paper') {
+    if (userInput === 'rock' | userInput === 'scissors' | userInput === 'paper' | userInput === 'bomb') {
       return userInput;
    } else {
       console.log('That is not a valid input. Please choose either rock, paper, or scissors and try again.');
@@ -21,6 +21,9 @@ var getComputerChoice = function () {
 }
 
 var determineWinner = function (userChoice, computerChoice) {
+   if (userInput === 'bomb') {
+       return 'CONGRATULATIONS! YOU WIN EVERYTHING!'
+   }
    if (userChoice === computerChoice) {
       return 'You have tied!';
    }
