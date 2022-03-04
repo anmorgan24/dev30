@@ -1,3 +1,5 @@
+// Project: Training Days
+
 const getRandEvent = () => {
     const random = Math.floor(Math.random() * 3);
   if (random === 0) {
