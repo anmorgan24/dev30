@@ -1,3 +1,7 @@
+// Convert your age from "human years" to "dog years" considering:
+// 1. The first two years of a dog's life count as 10.5 "dog years" each 
+// 2. Each year following equates to 4 dog years
+
 // define myAge as my age
 var myAge = 32;
 
