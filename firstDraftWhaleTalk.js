@@ -1,4 +1,4 @@
-// Whale Talk
+// FIRST DRAFT Whale Talk
 
 // There are a few simple rules for translating text to whale language:
     // 1. There are no consonants. Only vowels excluding “y”.
@@ -14,13 +14,15 @@ const vowels = ["a", "e", "i", "o", "u"];
 var resultArray = []
 
 for (let i = 0; i < input.length; i++) {
+    let char = input[i]
     for (let j = 0; j < vowels.length; j++) {
-        if (input[i] === vowels[j]){
-            if (input[i] === 'e' || input[i] === 'u') {
-                resultArray.push(input[i], input[i]);
+        let vowel = vowels[j]
+        if (vowel === char){
+            if (vowel === 'e' || vowel === 'u') {
+                resultArray.push(vowel, vowel);
             }
             else {
-                resultArray.push(input[i]);
+                resultArray.push(vowel);
             }
         }
     }  
