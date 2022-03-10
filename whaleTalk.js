@@ -14,12 +14,8 @@ const vowels = ["a", "e", "i", "o", "u"];
 var resultArray = []
 
 for (let i = 0; i < input.length; i++) {
-    // console.log(char);
-    // var element = input[char];
     let char = input[i]
     for (let j = 0; j < vowels.length; j++) {
-        // const element = array[index];
-        // console.log(vowel);
         let vowel = vowels[j]
         if (vowel === char){
             if (vowel === 'e' || vowel === 'u') {
