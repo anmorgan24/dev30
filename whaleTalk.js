@@ -7,7 +7,7 @@
 // var input = "There is, one knows not what sweet mystery about this sea,\
 //  whose gently awful stirrings seem to speak of some hidden soul beneath";
 
-var input = window.prompt("What would you like to translate to whale talk?");
+var input = window.prompt("What would you like to translate into whale speech?");
 
 const vowels = ["a", "e", "i", "o", "u"];
 
