@@ -39,12 +39,10 @@ betterWords.forEach(function (word) {
 
 var sentenceCounter = 0;
 var sentenceEnder = ['.', '!'];
-const chars = story.split('');
 
-chars.forEach(function (char) {
+story.split('').forEach(function (char) {
     if (sentenceEnder.includes(char)) {
-        sentenceCounter++;
-    }
+        sentenceCounter++};
 });
 
 linter = []
