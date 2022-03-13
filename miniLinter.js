@@ -8,42 +8,44 @@ let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 const storyWords = (story.split(" "));
 
+// convert to lowercase in preparation for use with includes()
 const lowerStoryWords = storyWords.map(word => {
     return word.toLowerCase();
 });
 
 betterWords = []
-for (let i = 0; i < lowerStoryWords.length; i++) {
-    if (lowerStoryWords[i] !== unnecessaryWords[0] && lowerStoryWords[i] !== unnecessaryWords[1] && lowerStoryWords[i] !== unnecessaryWords[2]) {
-        betterWords.push(lowerStoryWords[i])
+    
+lowerStoryWords.forEach(function (word) {
+    if (unnecessaryWords.includes(word) === false) {
+        betterWords.push(word);
     }
-};
+});
+
 var reallyCount = 0;
 var veryCount = 0;
 var basicallyCount = 0;
 
-for (let i = 0; i< betterWords.length; i++) {
-    if (betterWords[i] === overusedWords[0]) {
-        reallyCount++;
+betterWords.forEach(function (word) {
+    if (overusedWords.includes(word)) {
+        if (word === overusedWords[0]) {
+                    reallyCount++;
+        } else if (word === overusedWords[1]) {
+                    veryCount++;
+        } else if (word === overusedWords[2]) {
+                    basicallyCount++;
+        } 
     }
-    if (betterWords[i] === overusedWords[1]) {
-        veryCount++;
-    }
-    if (betterWords[i] === overusedWords[2]) {
-        basicallyCount++;
-    }
-    
-}
+});
 
 var sentenceCounter = 0;
+var sentenceEnder = ['.', '!'];
 const chars = story.split('');
 
-for (let i = 0; i < chars.length; i++) {
-    if (chars[i] == '.') {
+chars.forEach(function (char) {
+    if (sentenceEnder.includes(char)) {
         sentenceCounter++;
     }
-    
-}
+});
 
 linter = []
 linter[0] = `There are ${storyWords.length} words in this story.`
